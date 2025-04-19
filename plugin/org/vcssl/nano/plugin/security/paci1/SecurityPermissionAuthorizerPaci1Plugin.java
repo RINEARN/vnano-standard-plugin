@@ -1,5 +1,5 @@
 /*
- * Author:  RINEARN (Fumihiro Matsui), 2020-2021
+ * Author:  RINEARN (Fumihiro Matsui), 2020-2025
  * License: CC0
  */
 
@@ -12,6 +12,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.Locale;
 
 import javax.swing.JOptionPane;
 
@@ -160,7 +161,7 @@ public class SecurityPermissionAuthorizerPaci1Plugin implements PermissionAuthor
 
 	/**
 	 * 初期化/終了時処理の引数に渡される、スクリプトエンジンとの情報のやり取りに使用するインターフェースを指定します。
-	 * 
+	 *
 	 * @return スクリプトエンジンとの情報のやり取りに使用するインターフェース
 	 */
 	@Override
@@ -309,7 +310,7 @@ public class SecurityPermissionAuthorizerPaci1Plugin implements PermissionAuthor
 		if (this.standardInputScanner == null) {
 			this.standardInputScanner = new Scanner(this.stdinStream);
 		}
-		String userDecision = this.standardInputScanner.nextLine().toLowerCase();
+		String userDecision = this.standardInputScanner.nextLine().toLowerCase(Locale.ROOT);
 
 		// ユーザーによる入力結果が無効だった場合に、3回だけ再入力を促す（初回入力とあわせて合計4回の入力機会）
 		int retryCount = 3;
@@ -328,7 +329,7 @@ public class SecurityPermissionAuthorizerPaci1Plugin implements PermissionAuthor
 			} else {
 				this.stdoutStream.print("Error. Input \"yes\" or \"y\" to allow, \"no\" or \"n\" to deny: ");
 			}
-			userDecision = this.standardInputScanner.nextLine().toLowerCase();
+			userDecision = this.standardInputScanner.nextLine().toLowerCase(Locale.ROOT);
 			inputIsValid = userDecision.equals("y") || userDecision.equals("n") || userDecision.equals("yes") || userDecision.equals("no");
 			retryCount--;
 		}
