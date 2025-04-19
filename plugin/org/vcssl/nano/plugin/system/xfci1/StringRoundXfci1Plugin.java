@@ -1,5 +1,5 @@
 /*
- * Author:  RINEARN (Fumihiro Matsui), 2022
+ * Author:  RINEARN (Fumihiro Matsui), 2022-2025
  * License: CC0
  * Interface Specification:
  *     https://www.vcssl.org/en-us/doc/connect/ExternalFunctionConnectorInterface1_SPEC_ENGLISH
@@ -20,6 +20,7 @@ import org.vcssl.connect.ExternalFunctionConnectorInterface1;
 import java.math.RoundingMode;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.util.Locale;
 
 
 /**
@@ -200,7 +201,7 @@ public class StringRoundXfci1Plugin implements ExternalFunctionConnectorInterfac
 		}
 
 		String roundedValue = rounder.toString();
-		if (roundedValue.toUpperCase().contains("E+")) {
+		if (roundedValue.toUpperCase(Locale.ROOT).contains("E+")) {
 			roundedValue = roundedValue.replace("E+", "E");
 			roundedValue = roundedValue.replace("e+", "e");
 		}
