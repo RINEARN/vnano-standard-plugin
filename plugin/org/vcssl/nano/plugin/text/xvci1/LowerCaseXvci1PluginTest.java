@@ -34,7 +34,7 @@ public class LowerCaseXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(20002L), value);
+			assertEquals(Long.valueOf(TextModeConstants.LOWER_CASE), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

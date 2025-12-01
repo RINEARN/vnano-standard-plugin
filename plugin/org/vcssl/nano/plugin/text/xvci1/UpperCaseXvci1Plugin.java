@@ -36,7 +36,7 @@ public class UpperCaseXvci1Plugin implements ExternalVariableConnectorInterface1
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)20003L;
+		return (Long)TextModeConstants.UPPER_CASE;
 	}
 
 	@Override

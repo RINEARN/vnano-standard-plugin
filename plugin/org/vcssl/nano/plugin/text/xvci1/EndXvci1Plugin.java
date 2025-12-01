@@ -36,7 +36,7 @@ public class EndXvci1Plugin implements ExternalVariableConnectorInterface1 {
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)10003L;
+		return (Long)TextModeConstants.END;
 	}
 
 	@Override

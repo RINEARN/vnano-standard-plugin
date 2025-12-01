@@ -36,7 +36,7 @@ public class ContainXvci1Plugin implements ExternalVariableConnectorInterface1 {
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)10005L;
+		return (Long)TextModeConstants.CONTAIN;
 	}
 
 	@Override

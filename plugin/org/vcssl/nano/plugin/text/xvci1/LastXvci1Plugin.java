@@ -36,7 +36,7 @@ public class LastXvci1Plugin implements ExternalVariableConnectorInterface1 {
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)301L;
+		return (Long)TextModeConstants.LAST;
 	}
 
 	@Override

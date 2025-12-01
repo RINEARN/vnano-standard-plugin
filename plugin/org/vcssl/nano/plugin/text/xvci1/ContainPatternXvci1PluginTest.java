@@ -34,7 +34,7 @@ public class ContainPatternXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(10006L), value);
+			assertEquals(Long.valueOf(TextModeConstants.CONTAIN_PATTERN), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

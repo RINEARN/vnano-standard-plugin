@@ -36,7 +36,7 @@ public class StartPatternXvci1Plugin implements ExternalVariableConnectorInterfa
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)10002L;
+		return (Long)TextModeConstants.START_PATTERN;
 	}
 
 	@Override

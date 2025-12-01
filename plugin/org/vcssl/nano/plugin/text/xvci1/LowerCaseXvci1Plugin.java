@@ -36,7 +36,7 @@ public class LowerCaseXvci1Plugin implements ExternalVariableConnectorInterface1
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)20002L;
+		return (Long)TextModeConstants.LOWER_CASE;
 	}
 
 	@Override

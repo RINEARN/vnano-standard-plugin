@@ -36,7 +36,7 @@ public class TrimXvci1Plugin implements ExternalVariableConnectorInterface1 {
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)20001L;
+		return (Long)TextModeConstants.TRIM;
 	}
 
 	@Override

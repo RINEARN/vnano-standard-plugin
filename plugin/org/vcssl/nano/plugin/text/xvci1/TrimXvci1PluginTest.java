@@ -34,7 +34,7 @@ public class TrimXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(20001L), value);
+			assertEquals(Long.valueOf(TextModeConstants.TRIM), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

@@ -34,7 +34,7 @@ public class LastPatternXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(302L), value);
+			assertEquals(Long.valueOf(TextModeConstants.LAST_PATTERN), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

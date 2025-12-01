@@ -34,7 +34,7 @@ public class LastXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(301L), value);
+			assertEquals(Long.valueOf(TextModeConstants.LAST), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

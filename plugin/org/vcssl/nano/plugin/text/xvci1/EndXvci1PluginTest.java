@@ -34,7 +34,7 @@ public class EndXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(10003L), value);
+			assertEquals(Long.valueOf(TextModeConstants.END), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

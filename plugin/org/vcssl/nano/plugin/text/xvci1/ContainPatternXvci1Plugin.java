@@ -36,7 +36,7 @@ public class ContainPatternXvci1Plugin implements ExternalVariableConnectorInter
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)10006L;
+		return (Long)TextModeConstants.CONTAIN_PATTERN;
 	}
 
 	@Override

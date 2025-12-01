@@ -36,7 +36,7 @@ public class FirstPatternXvci1Plugin implements ExternalVariableConnectorInterfa
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)202L;
+		return (Long)TextModeConstants.FIRST_PATTERN;
 	}
 
 	@Override

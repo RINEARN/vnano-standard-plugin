@@ -36,7 +36,7 @@ public class FullPatternXvci1Plugin implements ExternalVariableConnectorInterfac
 
 	@Override
 	public Object getData() throws ConnectorException {
-		return (Long)10007L;
+		return (Long)TextModeConstants.FULL_PATTERN;
 	}
 
 	@Override

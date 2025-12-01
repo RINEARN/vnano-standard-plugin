@@ -34,7 +34,7 @@ public class StartPatternXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(10002L), value);
+			assertEquals(Long.valueOf(TextModeConstants.START_PATTERN), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

@@ -34,7 +34,7 @@ public class StartXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(10001L), value);
+			assertEquals(Long.valueOf(TextModeConstants.START), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();

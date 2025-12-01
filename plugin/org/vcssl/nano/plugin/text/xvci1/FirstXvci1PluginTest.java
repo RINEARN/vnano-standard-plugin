@@ -34,7 +34,7 @@ public class FirstXvci1PluginTest {
 		// 値を検査
 		try {
 			Long value = (Long)(variable.getData());
-			assertEquals(Long.valueOf(201L), value);
+			assertEquals(Long.valueOf(TextModeConstants.FIRST), value);
 		} catch (ConnectorException e) {
 			e.printStackTrace();
 			fail();
