@@ -48,13 +48,10 @@ so same features are also available in scripts of the VCSSL by default, with imp
 		<dd>
 			Provides basic string process functions.
 			<br />
-			Variable: <a href="#PI">PI</a>
+			Variable: <a href="#"></a>
 			<br />
 			Function:
-				<a href="#rad">rad(degree)</a> / <a href="#deg">deg(radian)</a> / <a href="#sin">sin(x)</a> / <a href="#cos">cos(x)</a> / <a href="#tan">tan(x)</a> / 
-				<a href="#asin">asin(x)</a> / <a href="#acos">acos(x)</a> / <a href="#atan">atan(x)</a> /
-				<a href="#sqrt">sqrt(x)</a> / <a href="#ln">ln(x)</a> / <a href="#log10">log10(x)</a> / <a href="#pow">pow(x,exponent)</a> / <a href="#exp">exp(x)</a> /
-				<a href="#abs">abs(x)</a>
+				<a href="#atText">atText(text, index)</a>
 		</dd>
 </dl>
 
@@ -84,6 +81,37 @@ The plug-in providing elementary math functions.
 
 
 <h3>Functions</h3>
+
+
+<table id="rad" class="spec-table">
+	<tr>
+		<th class="lcol">Function</th>
+		<th class="rcol">atText( text, index )</th>
+	</tr>
+	<tr>
+		<td class="lcol">Feature</td>
+		<td class="rcol">
+			Gets the character at the specified index in the text.
+		</td>
+	</tr>
+	<tr>
+		<td class="lcol">Signature</td>
+		<td class="rcol">string atText( const string text, const int index )</td>
+	</tr>
+	<tr>
+		<td class="lcol">Params</td>
+		<td class="rcol">(string) text: The text from which the character will be picked up.<br />(int) index: The character index in the text (the index of the first character is 0).</td>
+	</tr>
+	<tr>
+		<td class="lcol">Return</td>
+		<td class="rcol">(string) The character at the specified index.</td>
+	</tr>
+	<tr>
+		<td class="lcol">Example</td>
+		<td class="rcol">string s = atText("ABCDE", 3); // "D"</td>
+	</tr>
+</table>
+
 
 
 
