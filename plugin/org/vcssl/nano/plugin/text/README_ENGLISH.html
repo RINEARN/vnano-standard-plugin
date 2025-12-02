@@ -358,7 +358,10 @@ The plug-in providing elementary math functions.
 	</tr>
 	<tr>
 		<td class="lcol">Params</td>
-		<td class="rcol">(string) text: The text from which the character will be picked up.<br />(int) index: The character index in the text (the index of the first character is 0).</td>
+		<td class="rcol">
+				(string) text: The text from which the character will be picked up.
+				<br />
+				(int) index: The character index in the text (the index of the first character is 0).</td>
 	</tr>
 	<tr>
 		<td class="lcol">Return</td>
@@ -370,6 +373,93 @@ The plug-in providing elementary math functions.
 	</tr>
 </table>
 
+
+<table id="adjustText" class="spec-table">
+	<tr>
+		<th class="lcol">Function</th>
+		<th class="rcol">adjustText( text, mode )</th>
+	</tr>
+	<tr>
+		<td class="lcol">Feature</td>
+		<td class="rcol">
+			Adjusts the text in the specified mode.
+			<br />
+			Depending on the mode, it trims spaces at the head/tail in the text, 
+			or converts alphabets in the text to upper/lower case characters.
+		</td>
+	</tr>
+	<tr>
+		<td class="lcol">Signature</td>
+		<td class="rcol">string adjustText( const string text, const int mode )</td>
+	</tr>
+	<tr>
+		<td class="lcol">Params</td>
+		<td class="rcol">
+			(string) text: The text to be adjusted.
+			<br />
+			(int) mode: The adjustment mode（ <a href="#TRIM">TRIM</a>, <a href="#LOWER_CASE">LOWER_CASE</a>, <a href="#UPPER_CASE">UPPER_CASE</a> ）
+		</td>
+	</tr>
+	<tr>
+		<td class="lcol">Return</td>
+		<td class="rcol">(string) The adjusted text.</td>
+	</tr>
+	<tr>
+		<td class="lcol">Example</td>
+		<td class="rcol">
+			string s = atText("   ABCDE  ", TRIM); // "ABCDE"
+			<br />
+			string s = atText("ABCDE", LOWER_CASE); // "abcde"
+			<br />
+			string s = atText("abcde", UPPER_CASE); // "ABCDE"
+		</td>
+	</tr>
+</table>
+
+
+<table id="cropText" class="spec-table">
+	<tr>
+		<th class="lcol">Function</th>
+		<th class="rcol">cropText( text, cropBegin, cropEnd )</th>
+	</tr>
+	<tr>
+		<td class="lcol">Feature</td>
+		<td class="rcol">
+			Crops a partial string from the text.
+			<br />
+			Specify the cropping range by indices assigned to "boundaries between characters." 
+			The index 0 points the beginning point (generarry left-edge) of the text.
+			This function crops the partial string between cropBegin-th boundary and cropEnd-th boundary.
+			<br />
+			In other words, if you want to regard these indices as "indices assigned to characters", 
+			this function crops the partial text from cropBegin-th character to (cropEnd-1)-th character.
+		</td>
+	</tr>
+	<tr>
+		<td class="lcol">Signature</td>
+		<td class="rcol">string cropText( const string text, const int cropBegin, const int cropEnd )</td>
+	</tr>
+	<tr>
+		<td class="lcol">Params</td>
+		<td class="rcol">
+			(string) text: The text from which the partial string to be cropped.
+			<br />
+			(int) cropBegin: The index of the beginning point of the partial text to be cropped.
+			<br />
+			(int) cropEnd: The index of the end point of the partial text to be cropped. See the description in "Feature" section.
+		</td>
+	</tr>
+	<tr>
+		<td class="lcol">Return</td>
+		<td class="rcol">(string) The cropped text.</td>
+	</tr>
+	<tr>
+		<td class="lcol">Example</td>
+		<td class="rcol">
+			string s = cropText("ABCDE", 1, 3); // "BC"
+		</td>
+	</tr>
+</table>
 
 
 
