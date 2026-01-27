@@ -1,5 +1,7 @@
 package org.vcssl.nano.plugin.text.xnci1;
 
+import org.vcssl.nano.plugin.text.xfci1.AtTextXfci1Plugin;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class TextBasicXnci1Plugin implements ExternalNamespaceConnectorInterface
 	public ExternalFunctionConnectorInterface1[] getFunctions() {
 		List<ExternalFunctionConnectorInterface1> functionList = new LinkedList<ExternalFunctionConnectorInterface1>();
 
-		//functionList.add(new ...Xfci1Plugin());
+		functionList.add(new AtTextXfci1Plugin());
 
 		return functionList.toArray(new ExternalFunctionConnectorInterface1[0]);
 	}

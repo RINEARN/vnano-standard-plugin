@@ -1,5 +1,5 @@
 /*
- * Author:  RINEARN (Fumihiro Matsui), 2021
+ * Author:  RINEARN (Fumihiro Matsui), 2021-2025
  * License: CC0
  */
 
@@ -9,6 +9,7 @@ import java.io.PrintStream;
 import java.io.InputStream;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.Locale;
 
 import javax.swing.JOptionPane;
 
@@ -270,7 +271,7 @@ public class ConfirmXfci1Plugin implements ExternalFunctionConnectorInterface1 {
 				} else {
 					this.stdoutStream.print("[ Input y (yes) / n (no) ]: ");
 				}
-				line = scanner.nextLine().toLowerCase();
+				line = scanner.nextLine().toLowerCase(Locale.ROOT);
 				inputIsValid = line.equals("y") || line.equals("n") || line.equals("yes") || line.equals("no");
 				retryCount--;
 			}
